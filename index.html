@@ -5,483 +5,311 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VILLA</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container">
-            <a class="navbar-brand ps-4" href="#">VILLA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav gap-5 mb-lg-0 ms-auto bg-white">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Properties</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Properties Details</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
-                    </li>
-                </ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-outline-secondary-1 fa fa-calendar gap-1 me-4"
-                    type="submit">&nbsp;&nbsp;&nbsp;Schedule a visit</button>
+<body class="bg-gray-50 overflow-x-hidden">
+
+    <input type="checkbox" id="menu-toggle" class="hidden">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md rounded-b-xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a class="text-3xl font-bold tracking-widest transition-all duration-500 hover:text-orange-500" href="#">VILLA</a>
+
+                <div class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                    <ul class="flex lg:flex-row lg:space-x-8 items-center w-full lg:w-auto">
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium" href="#home">Home</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium" href="#properties">Properties</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium" href="#properties">Property Details</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium" href="#contact">Contact</a></li>
+                        <li>
+                            <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg" href="#contact">
+                                <span>Schedule a Visit</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <label for="menu-toggle" class="lg:hidden text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+
             </div>
         </div>
     </nav>
-    <div class="img-fluid special1"
-        style="background-image: url(images/image2.jpg); background-repeat: no-repeat; background-size: cover;">
-        <p class="p1">Toronto,<span> Canada</span></p>
-        <h2 class="h21">HURRY! <br>GET THE <br>BEST VILLA <br>FOR YOU</h2>
-    </div>
-    <br><br><br><br><br><br>
-    <div class="container d-flex">
-        <div class="special2">
-            <img src="images/image3.jpg" class="img-thumbnail" alt=".">
-            <div class="special3 col-lg-4">
-                <a href="" class="a1">
-                    <img class="img2" src="images/icons8-task-64.png" alt=".">
-                </a>
+
+    <div id="sidebar-menu" class="fixed top-24 left-0 w-64 h-screen bg-white shadow-xl transition-transform duration-300 ease-in-out z-50 lg:hidden">
+        <div class="p-6">
+            <div class="flex justify-end mb-8">
+                <label for="menu-toggle" class="text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
             </div>
-        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="container m2">
-            <div class="div1">
-                <h6>| FEATURED</h6>&nbsp;&nbsp;
-                <h2>Best Appartment <br>& Sea View</h2>&nbsp;&nbsp;&nbsp;
-                <div class="content-box m19">
-                    <h4>Best Links?</h4>
-                    <p>Our villas are designed with spacious layouts and modern finishes, giving you comfort and style
-                        in every corner.</p>
-                </div>
-                <div class="content-box m19">
-                    <h4>How does this works?</h4>
-                    <p>Choose your villa, schedule a visit, and our team will guide you through a seamless buying
-                        process.</p>
-                </div>
-                <div class="content-box m19">
-                    <h4>Why is Villa Agency best?</h4>
-                    <p>With years of trusted service, we offer luxury villas that combine elegance, comfort, and
-                        investment value.</p>
-                </div>
-            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <div class="m1">
-                <ul>
-                    <li><img src="images/image4.jpg" alt="">
-                        <h4>250 m2<br><span>Total Flat Space</span></h4>
-                    </li>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li><img src="images/image5.jpg" alt="">
-                        <h4>Contract<br><span>Contract Ready</span></h4>
-                    </li>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li><img src="images/image6.jpg" alt="">
-                        <h4>Payment<br><span>Payment Process</span></h4>
-                    </li>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li><img src="images/image7.jpg" alt="">
-                        <h4>Safety<br><span>24/7 Under Control</span></h4>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>&nbsp;&nbsp;
-    <div class="container-fluid m3">
-        <div class="m4">
-            <h6>| Video View</h6>&nbsp;
-            <h2>Get Closer View <br> & Different <br> Feeling</h2>
-        </div>
-        <div class="m5">
-            <img src="images/image8.jpg" alt=".">
-            <div class="m6">
-                <a href="https://getbootstrap.com/">▶</a>
-            </div>
+            <ul class="flex flex-col space-y-4 overflow-y-scroll">
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg" href="#home">Home</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg" href="#properties">Properties</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium" href="#properties">Property Details</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg" href="#contact">Contact</a></li>
+                <li>
+                    <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg" href="#contact">
+                        <span>Schedule a Visit</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="cards-container">
-        <div class="card">
-            <div class="orange-circle"></div>
-            <h2>34 <br><span>Buildings Finished Now</span></h2>
-        </div>
-        <div class="card">
-            <div class="orange-circle"></div>
-            <h2>12 <br><span>Years Experience</span></h2>
-        </div>
-        <div class="card">
-            <div class="orange-circle"></div>
-            <h2>24 <br><span>Awards Won 2023</span></h2>
-        </div>
-    </div>
-    <div class="container m8">
-        <div class="row">
-            <div class="col-lg-4 m7">
-                <h6>| Best Deal</h6>
-                <h2>Find Your Best Deal Right Now!</h2>
-            </div>
-            <div class="col-lg-12 m9 container-fluid>
-                <div id=" bestDealsSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner">
 
-                    <div class="carousel-item active">
-                        <div
-                            class="deal-item d-flex flex-column flex-md-row justify-content-center align-items-stretch mb-4">
-                            <div class="info-box m10 bg-light rounded mb-4 mb-md-0 me-md-4">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Total Flat Space</div>
-                                    <div class="fw-bold">185 m2</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Floor number</div>
-                                    <div class="fw-bold">26th</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Number of rooms</div>
-                                    <div class="fw-bold">4</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Parking Available</div>
-                                    <div class="fw-bold">Yes</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Payment Process</div>
-                                    <div class="fw-bold">Bank</div>
-                                </div>
-                            </div>
+    <label for="menu-toggle" id="sidebar-overlay" class="fixed inset-0 bg-black z-40 cursor-pointer"></label>
 
-                            <div class="deal-image flex-grow-1 mb-4 mb-md-0 me-md-4">
-                                <img src="images/image10.jpg" class="img-fluid rounded" alt="Villa Interior 1">
-                            </div>
-
-                            <div class="extra-info-box p-4 bg-light rounded shadow-sm">
-                                <h5 class="fw-bold text-dark">Extra Info About Property</h5>
-                                <p class="small text-muted mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised
-                                    ipsum suspendisse. </p>
-                                <p class="small text-muted mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit. Quibusdam nulla sint obcaecati perspiciatis! Eius amet delectus porro?
-                                    Magnam provident ullam quisquam cum totam modi doloribus deleniti!</p>
-                                <button class="btn btn-outline-secondary fa fa-calendar gap-1 me-4 w-100"
-                                    type="submit">&nbsp;&nbsp;&nbsp;Schedule a visit</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div
-                            class="deal-item d-flex flex-column flex-md-row justify-content-center align-items-stretch mb-4x">
-                            <div class="info-box m10 bg-light rounded mb-4 mb-md-0 me-md-4">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Total Flat Space</div>
-                                    <div class="fw-bold">250 m2</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Floor number</div>
-                                    <div class="fw-bold">10th</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Number of rooms</div>
-                                    <div class="fw-bold">3</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Parking Available</div>
-                                    <div class="fw-bold">No</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Payment Process</div>
-                                    <div class="fw-bold">Card</div>
-                                </div>
-                            </div>
-
-                            <div class="deal-image flex-grow-1 mb-4 mb-md-0 me-md-4">
-                                <img src="images/image11.jpg" class="img-fluid rounded" alt="Villa Interior 2">
-                            </div>
-
-                            <div class="extra-info-box bg-light rounded">
-                                <h5 class="fw-bold text-dark">Extra Info About Property</h5>
-                                <p class="small text-muted mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised
-                                    ipsum suspendisse. </p>
-                                <p class="small text-muted mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit. Quibusdam nulla sint obcaecati perspiciatis! Eius amet delectus porro?
-                                    Magnam provident ullam quisquam cum totam modi doloribus deleniti!</p>
-                                <button class="btn btn-outline-secondary fa fa-calendar gap-1 me-4"
-                                    type="submit">&nbsp;&nbsp;&nbsp;Schedule a visit</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div
-                            class="deal-item d-flex flex-column flex-md-row justify-content-center align-items-stretch mb-4">
-                            <div class="info-box bg-light m10 rounded mb-4 mb-md-0 me-md-4">
-                                <div class="info-row d-flex justify-content-between">
-                                    <div class="text-muted">Total Flat Space</div>
-                                    <div class="fw-bold">300 m2</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Floor number</div>
-                                    <div class="fw-bold">1st</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Number of rooms</div>
-                                    <div class="fw-bold">5</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Parking Available</div>
-                                    <div class="fw-bold">Yes</div>
-                                </div>
-                                <hr class="my-2">
-                                <div class="info-row d-flex justify-content-between py-2">
-                                    <div class="text-muted">Payment Process</div>
-                                    <div class="fw-bold">Cash</div>
-                                </div>
-                            </div>
-
-                            <div class="deal-image flex-grow-1 mb-4 mb-md-0 me-md-4">
-                                <img src="images/image12.jpg" class="img-fluid rounded" alt="Villa Interior 3">
-                            </div>
-
-                            <div class="extra-info-box bg-light rounded">
-                                <h5 class="fw-bold text-dark">Extra Info About Property</h5>
-                                <p class="small text-muted mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised
-                                    ipsum suspendisse. </p>
-                                <p class="small text-muted mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit. Quibusdam nulla sint obcaecati perspiciatis! Eius amet delectus porro?
-                                    Magnam provident ullam quisquam cum totam modi doloribus deleniti!</p>
-                                <button class="btn btn-outline-secondary fa fa-calendar gap-1 me-4"
-                                    type="submit">&nbsp;&nbsp;&nbsp;Schedule a visit</button>
-                            </div>
-                        </div>
-                    </div>
-
+    <main>
+        <div id="home" class="relative w-full h-screen bg-cover bg-center" style="background-image: url(images/image2.jpg);">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 flex items-center justify-start h-full p-4 sm:p-8 md:p-16">
+                <div class="max-w-lg text-white">
+                    <p class="text-base sm:text-lg uppercase tracking-wide font-semibold text-orange-400 mb-2">Toronto, Canada</p>
+                    <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Your Dream Villa is Here</h1>
+                    <p class="text-sm sm:text-base mb-6">Experience the pinnacle of luxury living in our exclusive properties.</p>
+                    <a href="#properties" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors duration-300">Explore Now</a>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="m11">
-        <h6>| Properties</h6>
-        <h2>We Provide The Best <br> Property You Like</h2>
-    </div>
-    <div class="container my-5 content-container">
-        <!-- First Row of Cards -->
-        <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card m13">
-                    <img src="images/image13.jpg" class="card-img-top" alt="Project One">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span>Luxury Villa</span>
-                            <h6>$2.264.000</h6>
+        
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center gap-10">
+                    <div class="relative w-full lg:w-1/3">
+                        <img src="images/image3.jpg" alt="Featured Villa" class="rounded-2xl shadow-lg">
+                        <div class="absolute bottom-5 left-5 bg-orange-500 p-4 rounded-full shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM12 7c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S13.38 7 12 7z" />
+                            </svg>
                         </div>
-                        <h4 class="card-title text-start my-3">18 Old Street Miami, OR 16560</h4>
-                        <p class="card-text align-para">Experience unmatched luxury in this stunning villa, featuring
-                            spacious living areas and state-of-the-art amenities. Perfect for those who appreciate fine
-                            living and a serene environment.</p>
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-secondary fa gap-1 me-4" type="submit">Schedule a
-                                visit</button>
+                    </div>
+        
+                    <div class="w-full lg:w-1/3">
+                        <p class="text-orange-500 font-bold uppercase text-sm mb-2">Best Links</p>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Featured Properties</h2>
+                        
+                        <div class="mb-4">
+                            <input type="checkbox" id="best-link-1" class="hidden accordion-toggle">
+                            <label for="best-link-1" class="flex justify-between items-center cursor-pointer p-4 bg-gray-100 rounded-lg shadow-sm hover:bg-gray-200 transition-colors">
+                                <span class="font-semibold text-lg">Luxury Villas</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </label>
+                            <p class="accordion-content p-4 text-gray-600 bg-gray-50 rounded-b-lg">
+                                Experience the pinnacle of luxury living with our exclusive selection of villas. Each property is meticulously designed to offer a unique blend of elegance, comfort, and state-of-the-art amenities.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <input type="checkbox" id="best-link-2" class="hidden accordion-toggle">
+                            <label for="best-link-2" class="flex justify-between items-center cursor-pointer p-4 bg-gray-100 rounded-lg shadow-sm hover:bg-gray-200 transition-colors">
+                                <span class="font-semibold text-lg">Unique Architecture</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </label>
+                            <p class="accordion-content p-4 text-gray-600 bg-gray-50 rounded-b-lg">
+                                Our villas feature stunning and unique architectural designs that stand out from the rest. We collaborate with world-renowned architects to create spaces that are both beautiful and functional.
+                            </p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <input type="checkbox" id="best-link-3" class="hidden accordion-toggle">
+                            <label for="best-link-3" class="flex justify-between items-center cursor-pointer p-4 bg-gray-100 rounded-lg shadow-sm hover:bg-gray-200 transition-colors">
+                                <span class="font-semibold text-lg">Smart Home Ready</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7 10l5 5 5-5z" />
+                                </svg>
+                            </label>
+                            <p class="accordion-content p-4 text-gray-600 bg-gray-50 rounded-b-lg">
+                                Each property is equipped with the latest smart home technology. From automated lighting and security systems to climate control, your home can be managed from a single device.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="w-full lg:w-1/3 bg-gray-100 p-8 rounded-2xl shadow-lg">
+                        <p class="text-orange-500 font-bold uppercase text-sm mb-2">Our Features</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Discover the VILLA Difference</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-200 p-3 rounded-full text-orange-500">
+                                    <img src="images/image5.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">24/7 Support</h4>
+                                    <p class="text-gray-600 text-sm">Our dedicated support team is available around the clock to assist you with any inquiries or issues.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-200 p-3 rounded-full text-orange-500">
+                                    <img src="images/image6.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Certified Agents</h4>
+                                    <p class="text-gray-600 text-sm">Our agents are highly trained and certified, ensuring you receive the best guidance throughout your home-buying journey.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-200 p-3 rounded-full text-orange-500">
+                                    <img src="images/image7.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Financing Options</h4>
+                                    <p class="text-gray-600 text-sm">We provide a range of flexible financing options to help you secure your dream home with ease.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card m13">
-                    <img src="images/image14.jpg" class="card-img-top" alt="Project Two">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span>Luxury Villa</span>
-                            <h6>$1.180.000</h6>
-                        </div>
-                        <h4 class="card-title text-start my-3">54 New Street Florida, OR 27001</h4>
-                        <p class="card-text align-para">This elegant villa combines modern design with a classic touch,
-                            offering a cozy yet luxurious home. The open floor plan and large windows provide an
-                            abundance of natural light.</p>
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-secondary fa gap-1 me-4" type="submit">Schedule a
-                                visit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card m13">
-                    <img src="images/image15.jpg" class="card-img-top" alt="Project Three">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span>Luxury Villa</span>
-                            <h6>$1.460.000</h6>
-                        </div>
-                        <h4 class="card-title text-start my-3">26 Mid Street Portland, OR 38540</h4>
-                        <p class="card-text align-para">A true architectural masterpiece, this villa boasts panoramic
-                            city views and a private garden. It's an ideal choice for a family looking for comfort,
-                            security, and a touch of class.</p>
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-secondary fa gap-1 me-4" type="submit">Schedule a
-                                visit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="row g-4 mt-4">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card m13">
-                    <img src="images/image16.jpg" class="card-img-top" alt="Project Four">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span>Apartment</span>
-                            <h6>$584.500</h6>
-                        </div>
-                        <h4 class="card-title text-start my-3">12 Hope Street Portland, OR 28620</h4>
-                        <p class="card-text align-para">This stylish and cozy apartment is nestled in a vibrant
-                            neighborhood, offering convenience and a modern lifestyle. It's the perfect urban retreat
-                            for young professionals or couples.</p>
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-secondary fa gap-1 me-4" type="submit">Schedule a
-                                visit</button>
-                        </div>
-                    </div>
+
+        <section id="properties" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <p class="text-orange-500 font-bold uppercase text-sm mb-2">Properties</p>
+                    <h2 class="text-4xl font-bold text-gray-900">Find Your Dream Home</h2>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card m13">
-                    <img src="images/image17.jpg" class="card-img-top" alt="Project Five">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span>Penthouse</span>
-                            <h6>$925.600</h6>
-                        </div>
-                        <h4 class="card-title text-start my-3">34 Beach Street Miami, OR 42680</h4>
-                        <p class="card-text align-para">Enjoy breathtaking views from this exquisite penthouse.
-                            Featuring high-end finishes and an expansive private terrace, this property is the pinnacle
-                            of luxury urban living.</p>
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-secondary fa gap-1 me-4" type="submit">Schedule a
-                                visit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card m13 m14">
-                    <img src="images/image18.jpg" class="card-img-top" alt="Project Six">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span>Modern Condo</span>
-                            <h6>$350.000</h6>
-                        </div>
-                        <h4 class="card-title text-start my-3">221B Baker Street, London, OR 12345</h4>
-                        <p class="card-text align-para">This smart, stylish condo in a prime location offers modern
-                            amenities and an efficient design, making it a great investment opportunity.</p>
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-outline-secondary fa gap-1 me-4" type="submit">Schedule a
-                                visit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="contact-section">
-        <div class="container m16">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 text-center">
-                    <div class="contact-heading m16">
-                        <h6>| Contact Us</h6>
-                        <h2>Get In Touch <br> With Our Agents</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row m18">
-                <div class="col-lg-6 col-sm-12 w-50 h-100">
-                    <div class="map-section p-0 w-100">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12469.776493332698!2d-80.14036379941481!3d25.907788681148624!2m3!1f357.26927939317244!2f20.870722720054623!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e1!3m2!1sen!2sth!4v1642869952544!5m2!1sen!2sth"
-                            allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>&nbsp;&nbsp;&nbsp;
-                <div class="col-lg-6">
-                    <form id="contact-form" action="" method="post" class="bg-white m17">
-                        <div class="row contact-form">
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="">Full Name</label>
-                                    <input type="name" name="name" id="name" placeholder="Your Name" autocomplete="on"
-                                        required>
-                                </fieldset>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <img src="images/image11.jpg" alt="Modern Villa" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                                <span class="text-lg font-bold text-gray-900">$2,500,000</span>
                             </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="">Email</label>
-                                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                        placeholder="Your Email" required>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="">Subject</label>
-                                    <input type="subject" name="subject" id="subject" placeholder="Subject"
-                                        autocomplete="on">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="">Message</label>
-                                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="btn-submit">Send Message</button>
-                                </fieldset>
+                            <h3 class="text-2xl font-semibold mb-2">Luxury Modern Villa</h3>
+                            <p class="text-gray-600 mb-4">123 Pine St, Anytown, ON</p>
+                            <div class="flex justify-between text-sm text-gray-500">
+                                <span class="flex items-center"><img src="images/bed-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp;&nbsp;4 Beds</span>
+                                <span class="flex items-center"><img src="images/bathtub-2-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp; 3 Baths</span>
+                                <span class="flex items-center"><img src="images/house-size-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp;2,400 sqft</span>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <img src="images/image12.jpg" alt="Beachfront House" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full">For Sale</span>
+                                <span class="text-lg font-bold text-gray-900">$3,100,000</span>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-2">Beachfront House</h3>
+                            <p class="text-gray-600 mb-4">456 Ocean View Rd, City, BC</p>
+                            <div class="flex justify-between text-sm text-gray-500">
+                                <span class="flex items-center"><img src="images/bed-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp;&nbsp;4 Beds</span>
+                                <span class="flex items-center"><img src="images/bathtub-2-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp; 3 Baths</span>
+                                <span class="flex items-center"><img src="images/house-size-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp;2,400 sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <img src="images/image10.jpg" alt="Mountain Retreat" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">New</span>
+                                <span class="text-lg font-bold text-gray-900">$1,950,000</span>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-2">Cozy Mountain Retreat</h3>
+                            <p class="text-gray-600 mb-4">789 Summit Ln, Townville, AB</p>
+                            <div class="flex justify-between text-sm text-gray-500">
+                                <span class="flex items-center"><img src="images/bed-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp;&nbsp;4 Beds</span>
+                                <span class="flex items-center"><img src="images/bathtub-2-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp; 3 Baths</span>
+                                <span class="flex items-center"><img src="images/house-size-svgrepo-com.svg" alt="" style="width: 15px; height: 15px;">&nbsp;2,400 sqft</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="contact-info-container row">
-                <div class="col-lg-6 m20">
-                    <div class="contact-info-box m18">
-                        <i class="fa fa-phone"></i>
-                        <h4>123-456-7890</h4>
-                        <p>Office Phone</p>
+        </section>
+
+        <section id="video" class="py-16" style="background-image: url(images/image19.jpg); background-repeat: no-repeat; background-size: cover;">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <p class="text-orange-500 font-bold uppercase text-sm mb-2">Video Presentation</p>
+                    <h2 class="text-4xl font-bold text-gray-900">Explore Our Villa Through Video</h2>
+                </div>
+                <div class="relative w-full overflow-hidden rounded-2xl shadow-lg" style="padding-top: 56.25%;">
+                    <img class="absolute top-0 left-0 w-full h-full object-cover" src="images/image8.jpg" alt="Video Thumbnail">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-in-out play-button">
+                        <svg class="h-16 w-16 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <br><br><br>
+
+        <section id="contact" class="py-16 text-white" style="background-image: url(images/image9.jpg); background-size: cover; background-repeat: no-repeat;">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <p class="text-orange-500 font-bold uppercase text-sm mb-2">Get in touch</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold leading-tight mb-2">Feel Free to Contact Us</h2>
+                    <p class="text-gray-400">Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+
+                <div class="flex flex-col items-center"">
+                    <div class="w-full lg:w-1/2 bg-gray-800 p-8 rounded-2xl shadow-lg mb-8">
+                        <form id="contact-form" action="#" method="post" class="space-y-4">
+                            <div class="flex flex-col sm:flex-row sm:space-x-4">
+                                <input type="name" name="name" id="name" placeholder="Your Name" class="form-input" required>
+                                <input type="email" name="email" id="email" placeholder="Your Email" class="form-input" required>
+                            </div>
+                            <input type="text" name="subject" id="subject" placeholder="Subject" class="form-input" required>
+                            <textarea name="message" id="message" placeholder="Your Message" class="form-textarea" required></textarea>
+                            <button type="submit" id="form-submit" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors duration-300 w-full">Send Message</button>
+                        </form>
                     </div>
-                </div>&nbsp;
-                <div class="col-lg-6 m20">
-                    <div class="contact-info-box m18">
-                        <i class="fa fa-map-marker"></i>
-                        <h4>123 Luxury Lane, Toronto, ON</h4>
-                        <p>Office Address</p>
+
+                    <!-- Contact Info Boxes -->
+                    <div class="w-full flex flex-col sm:flex-row sm:justify-between space-y-6 sm:space-y-0 sm:space-x-4">
+                        <div class="bg-white rounded-2xl shadow-lg p-6 text-gray-900 flex items-center space-x-4 flex-1">
+                            <div class="bg-gray-200 p-4 rounded-full text-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24.9.36 1.88.55 2.88.55s1.98-.19 2.88-.55c.35-.12.75-.03 1.02.24l2.2 2.2c.28.28.36.68.24 1.03-1.02 2.83-3.76 5.14-6.59 6.59l-2.2-2.2c-.28-.28-.68-.36-1.03-.24-2.83 1.02-5.14 3.76-6.59 6.59l-2.2 2.2c-.28.28-.36-.68-.24-1.03 1.02-2.83 3.76-5.14 6.59-6.59z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">123-456-7890</h4>
+                                <p class="text-gray-600">Office Phone</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-lg p-6 text-gray-900 flex items-center space-x-4 flex-1">
+                            <div class="bg-gray-200 p-4 rounded-full text-orange-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">123 Luxury Lane, Toronto, ON</h4>
+                                <p class="text-gray-600">Office Address</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        </section>
+    </main>
 </body>
 
 </html>
