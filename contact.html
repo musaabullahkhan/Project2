@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VILLA</title>
+    <link rel="icon" type="image/x-icon" href="images/villa (1).png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden">
+
+    <input type="checkbox" id="menu-toggle" class="hidden">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md rounded-b-xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a class="text-3xl font-bold tracking-widest m1" href="#">VILLA</a>
+
+                <div class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                    <ul class="flex lg:flex-row lg:space-x-8 items-center w-full lg:w-auto">
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="index.html">Home</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="properties.html">Properties</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="propertydetails.html">Property Details</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="contact.html">Contact</a></li>
+                        <li>
+                            <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg"
+                                href="scheduleavisit.html">
+                                <span>Schedule a Visit</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <label for="menu-toggle"
+                    class="lg:hidden text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="sidebar-menu"
+        class="fixed top-24 left-0 w-64 h-screen bg-white shadow-xl transition-transform duration-300 ease-in-out z-50 lg:hidden">
+        <div class="p-6">
+            <div class="flex justify-end mb-8">
+                <label for="menu-toggle"
+                    class="text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+            </div>
+            <ul class="flex flex-col space-y-4 overflow-y-scroll">
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
+                        href="index.html">Home</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
+                        href="#properties">Properties</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                        href="#properties">Property Details</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
+                        href="#contact">Contact</a></li>
+                <li>
+                    <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg"
+                        href="scheduleavisit.html">
+                        <span>Schedule a Visit</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section id="contact" class="py-16 text-white"
+        style="background-image: url(images/image9.jpg); background-size: cover; background-repeat: no-repeat;">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-orange-500 font-bold uppercase text-sm mb-2">Get in touch</p>
+                <h2 class="text-3xl sm:text-4xl font-bold leading-tight mb-2">Feel Free to Contact Us</h2>
+                <p class="text-gray-400">Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <div class="flex flex-col items-center"">
+                    <div class=" w-full lg:w-1/2 bg-gray-800 p-8 rounded-2xl shadow-lg mb-8">
+                <form id="contact-form" action="#" method="post" class="space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:space-x-4">
+                        <input type="name" name="name" id="name" placeholder="Your Name" class="form-input" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" class="form-input"
+                            required>
+                    </div>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" class="form-input" required>
+                    <textarea name="message" id="message" placeholder="Your Message" class="form-textarea"
+                        required></textarea>
+                    <button type="submit" id="form-submit"
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors duration-300 w-full">Send
+                        Message</button>
+
+                    <div class="special-1 flex items-center space-x-4 ml-8">
+                        <a href="login.html"
+                            class="a-1 px-6 py-2 text-gray-700 font-medium rounded-full hover:bg-gray-100 transition-colors">Login</a>
+                        <a href="signup.html"
+                            class="a-2 px-6 py-2 bg-orange-500 text-white font-medium rounded-full shadow-md hover:bg-orange-600 transition-colors">Sign
+                            Up</a>
+                    </div>
+            </div>
+            </form>
+        </div>
+
+        <div class="w-full flex flex-col sm:flex-row sm:justify-between space-y-6 sm:space-y-0 sm:space-x-4">
+            <div class="bg-white rounded-2xl shadow-lg p-6 text-gray-900 flex items-center space-x-4 flex-1">
+                <div class="bg-gray-200 p-4 rounded-full text-orange-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24.9.36 1.88.55 2.88.55s1.98-.19 2.88-.55c.35-.12.75-.03 1.02.24l2.2 2.2c.28.28.36.68.24 1.03-1.02 2.83-3.76 5.14-6.59 6.59l-2.2-2.2c-.28-.28-.68-.36-1.03-.24-2.83 1.02-5.14 3.76-6.59 6.59l-2.2 2.2c-.28.28-.36-.68-.24-1.03 1.02-2.83 3.76-5.14 6.59-6.59z" />
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold">123-456-7890</h4>
+                    <p class="text-gray-600">Office Phone</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-6 text-gray-900 flex items-center space-x-4 flex-1">
+                <div class="bg-gray-200 p-4 rounded-full text-orange-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold">123 Luxury Lane, Toronto, ON</h4>
+                    <p class="text-gray-600">Office Address</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div><br><br><br>
+
+        <div class="iframe-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12469.776493332698!2d-80.14036379941481!3d25.907788681148624!2m3!1f357.26927939317244!2f20.870722720054623!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e1!3m2!1sen!2sth!4v1642869952544!5m2!1sen!2sth"
+                frameborder="0" width="100%" height="600"></iframe>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="container-fluid main3">
+            <div class="col-lg-12">
+                <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.<a href="">TemplateMo</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

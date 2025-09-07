@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="icon" type="image/x-icon" href="images/villa (1).png">
+    <link rel="stylesheet" href="propertydetails.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden">
+
+    <input type="checkbox" id="menu-toggle" class="hidden">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md rounded-b-xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a class="text-3xl font-bold tracking-widest m1" href="#">VILLA</a>
+
+                <div class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                    <ul class="flex lg:flex-row lg:space-x-8 items-center w-full lg:w-auto">
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="index.html">Home</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="properties.html">Properties</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="#properties">Property Details</a></li>
+                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                                href="contact.html">Contact</a></li>
+                        <li>
+                            <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg"
+                                href="scheduleavisit.html">
+                                <span>Schedule a Visit</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <label for="menu-toggle"
+                    class="lg:hidden text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="sidebar-menu"
+        class="fixed top-24 left-0 w-64 h-screen bg-white shadow-xl transition-transform duration-300 ease-in-out z-50 lg:hidden">
+        <div class="p-6">
+            <div class="flex justify-end mb-8">
+                <label for="menu-toggle"
+                    class="text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+            </div>
+            <ul class="flex flex-col space-y-4 overflow-y-scroll">
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
+                        href="index.html">Home</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
+                        href="#properties">Properties</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
+                        href="#properties">Property Details</a></li>
+                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
+                        href="contact.html">Contact</a></li>
+                <li>
+                    <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg"
+                        href="scheduleavisit.html">
+                        <span>Schedule a Visit</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <main class="container-fluid w-100">
+        <div class="main1 w-100">
+            <div class="main11">
+                <span><a href="#">Home</a> /Single Property</span>
+                <h3>PROPERTIES</h3>
+            </div>
+        </div>
+    </main><br><br><br><br>
+
+    <label for="menu-toggle" id="sidebar-overlay" class="fixed inset-0 bg-black z-40 cursor-pointer"></label>
+
+    <main>
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center gap-10">
+                    <div class="relative w-full">
+                        <img src="images/image12.jpg" alt="Featured Villa" class="rounded-2xl shadow-lg"
+                            style="width: 700px; height: 500px;">
+                        <div class="absolute bottom-5 left-5 p-4 shadow-lg">
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-100 lg:w-2/3 p-8 rounded-2xl shadow-lg">
+                        <p class="text-orange-500 font-bold uppercase text-sm mb-2">Our Features</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Discover the VILLA Difference</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-200 p-3 rounded-full text-orange-500">
+                                    <img src="images/image5.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">24/7 Support</h4>
+                                    <p class="text-gray-600 text-sm">Our dedicated support team is available around the
+                                        clock to assist you with any inquiries or issues.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-200 p-3 rounded-full text-orange-500">
+                                    <img src="images/image6.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Certified Agents</h4>
+                                    <p class="text-gray-600 text-sm">Our agents are highly trained and certified,
+                                        ensuring you receive the best guidance throughout your home-buying journey.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-gray-200 p-3 rounded-full text-orange-500">
+                                    <img src="images/image7.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Financing Options</h4>
+                                    <p class="text-gray-600 text-sm">We provide a range of flexible financing options to
+                                        help you secure your dream home with ease.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="main5 container-fluid">
+            <div class=" mb-4">
+                <span class="text-white text-xs font-bold px-3 py-1">Appartment</span>
+                <p class="text-gray-600 mb-4 pp-1">7 Sunset Lane, Meadowbrook</p>
+                <p class="pp-2">Nestled in a private, lush landscape, this exquisite villa offers a tranquil escape with its
+                    sprawling, manicured gardens and vibrant greenery. The home is designed to blend seamlessly with
+                    nature, featuring floor-to-ceiling windows that offer breathtaking views of the surrounding
+                    paradise. The centerpiece of this outdoor haven is a sparkling, azure-blue swimming pool, perfect
+                    for serene mornings or lively afternoons with family and friends. <br>
+
+                    A spacious patio area extends from the main living space, creating an ideal setting for al fresco
+                    dining and relaxation by the water. Every detail of the property is crafted to provide a sense of
+                    luxury and comfort, from the expansive grounds that invite leisurely strolls to the private,
+                    secluded corners that promise peace and quiet. This villa is more than just a home; it's a personal
+                    resort where every day feels like a vacation.</p>
+            </div>
+            
+           
+
+            <footer>
+                <div class="container-fluid main3">
+                    <div class="col-lg-12 main5">
+                        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.<a href="">TemplateMo</a></p>
+                    </div>
+                </div>
+            </footer>
+
+</body>
+
+</html>

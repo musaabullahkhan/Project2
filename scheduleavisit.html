@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Visit</title>
+    <link rel="icon" type="image/x-icon" href="images/villa (1).png">
+    <link rel="stylesheet" href="scheduleavisit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-image-container">
+        <div class="overlay"></div>
+    </div>
+    
+    <header>
+        <nav class="sticky-nav">
+            <div class="nav-container">
+                <a class="logo" href="index.html">VILLA</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="propertydetails.html">Property Details</a></li>
+                    <li><a href="contact.html">Contact</a></li>&nbsp;&nbsp;&nbsp;
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="schedule-section">
+        <div class="form-container">
+            <h2>Schedule Your Visit</h2>
+            <p>Please fill out the form below to book a visit to your desired property.</p>
+            <form action="#" method="post" class="visit-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number" required>
+                <input type="text" name="property" placeholder="Property of Interest" required>
+                <div class="date-time-group">
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                </div>
+                <textarea name="message" placeholder="Specific requests, questions"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

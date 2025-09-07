@@ -62,7 +62,7 @@ body {
     transition: max-height 0.3s ease-in-out;
 }
 
-.accordion-toggle:checked+.accordion-label+.accordion-content {
+.accordion-toggle:checked + .accordion-label + .accordion-content {
     max-height: 200px;
 }
 
@@ -123,46 +123,56 @@ body {
     }
 }
 
-.main2 {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 50px;
+.main5 span {
+    position: relative;
+    bottom: 40px;
+    left: 130px;
+    background-color: #FBD9CF;
+    color: #1e1e1e;
 }
 
-.main21 {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    color: #333;
-    text-decoration: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-.main21:hover {
-    background-color: #f35525;
-    color: #fff;
-    border-color: #f35525;
+.main5 p {
+    position: relative;
+    bottom: 20px;
+    left: 130px;
+    font-size: 25px;
+    color: #1e1e1e;
+    font-weight: 700;
 }
 
 .main3 {
-    background-color: #333;
+    background-color: #333;    
+    height: 100px;
 }
 
-footer p {
+footer {
+    background-color: #333;
+    height: 150px;
+}
+
+.main3 p {
+    padding-top: 45px;
+    color: #ffffff;
     text-align: center;
     line-height: 100px;
-    color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-
 }
 
-footer a {
-    color: #ffffff;
+.main3 a {
+    color: #fff;
     transition: all .3s;
     position: relative;
     z-index: 3;
+    margin-right: 230px; 
+}
+
+.main5 .pp-2 {
+    width: 1300px;
+    font-size: 20px;
+    color: #4A4A4A;
+}
+
+.specail1 p{
+    margin-right: 10px;
 }
