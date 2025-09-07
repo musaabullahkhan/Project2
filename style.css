@@ -117,3 +117,9 @@ footer a {
         padding-left: 1px;
     }
 }
+
+@media (max-width: 1023px) {
+  nav {
+    overflow-x: auto;
+  }
+}
