@@ -1,0 +1,25 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.iframe-container iframe {
+    width: 80%;
+    height: 600px;
+    border: none;
+    margin: auto;
+    padding-left: 40px;
+}
