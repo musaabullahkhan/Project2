@@ -56,13 +56,29 @@ body {
     pointer-events: auto;
 }
 
+
+@media (max-width: 1023px) {
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        z-index: 40;
+        padding-bottom: 1rem;
+        max-height: 80vh;
+    }
+}
+
 .accordion-content {
     max-height: 0;
-    overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 }
 
-.accordion-toggle:checked + .accordion-label + .accordion-content {
+.accordion-toggle:checked+.accordion-label+.accordion-content {
     max-height: 200px;
 }
 
@@ -78,6 +94,7 @@ body {
     background-color: #333;
     color: #ffffff;
 }
+
 footer p {
     text-align: center;
     line-height: 100px;
@@ -119,7 +136,7 @@ footer a {
 }
 
 @media (max-width: 1023px) {
-  nav {
-    overflow-x: auto;
-  }
+    nav {
+        overflow-x: auto;
+    }
 }

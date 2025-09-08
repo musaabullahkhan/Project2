@@ -125,17 +125,11 @@ body {
 }
 
 .main5 span {
-    position: relative;
-    bottom: 40px;
-    left: 130px;
     background-color: #FBD9CF;
     color: #1e1e1e;
 }
 
 .main5 p {
-    position: relative;
-    bottom: 20px;
-    left: 130px;
     font-size: 25px;
     color: #1e1e1e;
     font-weight: 700;
@@ -148,7 +142,8 @@ body {
 
 footer {
     background-color: #333;
-    height: 150px;
+    height: 180px;
+    width: 100%;
 }
 
 .main3 p {
@@ -174,6 +169,4 @@ footer {
     color: #4A4A4A;
 }
 
-.specail1 p{
-    margin-right: 10px;
-}
+
