@@ -185,3 +185,31 @@ footer {
         gap: 1rem;
     }
 }
+
+#sidebar-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #menu-toggle:checked ~ #sidebar-menu {
+    transform: translateX(0);
+  }
+  
+  #sidebar-overlay {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #menu-toggle:checked ~ #sidebar-overlay {
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+  /* Sidebar scrolling */
+#sidebar-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow: scroll;
+    max-height: 100vh;
+  }
+  

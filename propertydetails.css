@@ -1,171 +1,120 @@
+/* propertydetails.css */
+
+/* General font */
 body {
     font-family: 'Poppins', sans-serif;
     color: #1e1e1e;
-}
-
-.form-input {
-    width: 100%;
-    height: 44px;
-    border-radius: 22px;
-    background-color: #f6f6f6;
-    color: black;
-    border: none;
-    margin-bottom: 24px;
-    font-size: 14px;
-    padding: 0 15px;
-    outline: none;
-}
-
-.form-textarea {
-    width: 100%;
-    height: 150px;
-    border-radius: 22px;
-    background-color: #f6f6f6;
-    border: none;
-    margin-bottom: 24px;
-    font-size: 14px;
-    padding: 10px 15px;
-    outline: none;
-}
-
-.play-button:hover {
-    transform: scale(1.1);
-}
-
-#menu-toggle:checked {
-    display: none;
-}
-
-#sidebar-menu {
-    overflow: scroll;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-#menu-toggle:checked~#sidebar-menu {
-    transform: translateX(0);
-}
-
-#sidebar-overlay {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#menu-toggle:checked~#sidebar-overlay {
-    opacity: 0.5;
-    pointer-events: auto;
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-}
-
-.accordion-toggle:checked + .accordion-label + .accordion-content {
-    max-height: 200px;
-}
-
-.accordion-label svg {
-    transition: transform 0.3s ease-in-out;
-}
-
-.accordion-toggle:checked+.accordion-label svg {
-    transform: rotate(180deg);
-}
-
-.main1 {
+  }
+  
+  /* Hero background */
+  .main1 {
     background-image: url(images/image20.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
     padding-top: 70px;
-}
-
-.main11 {
+  }
+  
+  .main11 {
     width: 100%;
     text-align: center;
-}
-
-.main11 span {
-    margin-left: 515px;
+  }
+  
+  .main11 span {
     background-color: #fff;
     color: #1e1e1e;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    width: auto;
+    display: inline-block;
     padding: 10px 25px;
-    text-align: center;
     margin-bottom: 30px;
-    margin-right: 530px;
-}
-
-.main11 h3 {
+    border-radius: 6px;
+  }
+  
+  .main11 h3 {
     text-align: center;
     font-size: 48px;
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
-}
-
-@media (max-width: 1300px) {
-    .main1 {
-        padding: 100px;
-    }
-
-    .main11 {
-        text-align: center;
-    }
-
-    .main11 span,
-    a {
-        margin: 0px;
-    }
-}
-
-.main5 span {
+  }
+  
+  /* Apartment box */
+  .main5 span {
     background-color: #FBD9CF;
     color: #1e1e1e;
-}
-
-.main5 p {
-    font-size: 25px;
+    border-radius: 6px;
+  }
+  
+  .main5 p {
+    font-size: 22px;
     color: #1e1e1e;
-    font-weight: 700;
-}
-
-.main3 {
-    background-color: #333;    
-    height: 100px;
-}
-
-footer {
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  
+  .main5 .pp-2 {
+    font-size: 18px;
+    color: #4A4A4A;
+    font-weight: 400;
+    max-width: 100%;
+  }
+  
+  /* Footer */
+  footer {
     background-color: #333;
-    height: 180px;
     width: 100%;
-}
-
-.main3 p {
-    padding-top: 45px;
+    padding: 40px 20px;
+  }
+  
+  footer p {
     color: #ffffff;
     text-align: center;
-    line-height: 100px;
     font-size: 16px;
     font-weight: 400;
-}
-
-.main3 a {
+  }
+  
+  footer a {
     color: #fff;
     transition: all .3s;
-    position: relative;
-    z-index: 3;
-    margin-right: 230px; 
-}
-
-.main5 .pp-2 {
-    width: 1000px;
-    font-size: 20px;
-    color: #4A4A4A;
-}
+  }
+  
+  footer a:hover {
+    color: #f97316; /* Tailwind orange-500 */
+  }
+  
+  /* Responsive hero */
+  @media (max-width: 1024px) {
+    .main1 {
+      padding: 100px 20px;
+    }
+  }
+  
+  #sidebar-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #menu-toggle:checked ~ #sidebar-menu {
+    transform: translateX(0);
+  }
+  
+  #sidebar-overlay {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #menu-toggle:checked ~ #sidebar-overlay {
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+  /* Sidebar scrolling */
+#sidebar-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow: scroll;
+    max-height: 100vh;
+  }
+  

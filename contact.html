@@ -18,80 +18,66 @@
 
     <input type="checkbox" id="menu-toggle" class="hidden">
 
-    <nav class="sticky top-0 z-50 bg-white shadow-md rounded-b-xl">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <a class="text-3xl font-bold tracking-widest m1" href="#">VILLA</a>
+<nav class="sticky top-0 z-50 bg-white shadow-md rounded-b-xl">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-24">
 
-                <div class="hidden lg:flex lg:items-center w-full lg:w-auto">
-                    <ul class="flex lg:flex-row lg:space-x-8 items-center w-full lg:w-auto">
-                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
-                                href="index.html">Home</a></li>
-                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
-                                href="properties.html">Properties</a></li>
-                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
-                                href="propertydetails.html">Property Details</a></li>
-                        <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
-                                href="contact.html">Contact</a></li>
-                        <li>
-                            <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg"
-                                href="scheduleavisit.html">
-                                <span>Schedule a Visit</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <label for="menu-toggle"
-                    class="lg:hidden text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </label>
+      <!-- Logo -->
+      <a href="index.html" class="text-3xl font-bold tracking-widest">VILLA</a>
 
-            </div>
-        </div>
-    </nav>
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex lg:items-center space-x-6">
+        <a href="index.html" class="text-gray-900 hover:text-orange-500 font-medium">Home</a>
+        <a href="properties.html" class="text-gray-900 hover:text-orange-500 font-medium">Properties</a>
+        <a href="propertydetails.html" class="text-gray-900 hover:text-orange-500 font-medium">Property Details</a>
+        <a href="contact.html" class="text-gray-900 hover:text-orange-500 font-medium">Contact</a>
 
-    <div id="sidebar-menu"
-        class="fixed top-24 left-0 w-64 h-screen bg-white shadow-xl transition-transform duration-300 ease-in-out z-50 lg:hidden">
-        <div class="p-6">
-            <div class="flex justify-end mb-8">
-                <label for="menu-toggle"
-                    class="text-gray-500 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500 cursor-pointer">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </label>
-            </div>
-            <ul class="flex flex-col space-y-4">
-                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
-                        href="index.html">Home</a></li>
-                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
-                        href="#properties">Properties</a></li>
-                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium"
-                        href="#properties">Property Details</a></li>
-                <li><a class="text-gray-900 hover:text-orange-500 transition-colors duration-300 font-medium text-lg"
-                        href="#contact">Contact</a></li>
-                <li>
-                    <a class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 transition-colors duration-300 px-6 py-2 rounded-full shadow-lg"
-                        href="scheduleavisit.html">
-                        <span>Schedule a Visit</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <!-- Login & Signup -->
+        <a href="login.html" class="px-4 py-2 rounded-full text-gray-900 border border-gray-300 hover:bg-gray-100">Login</a>
+        <a href="signup.html" class="px-4 py-2 rounded-full bg-orange-500 text-white hover:bg-orange-600 shadow">Sign Up</a>
+
+        <!-- Schedule a Visit -->
+        <a href="scheduleavisit.html"
+           class="flex items-center space-x-2 text-white bg-gray-900 hover:bg-orange-500 px-6 py-2 rounded-full shadow-lg">
+          <span>Schedule a Visit</span>
+        </a>
+      </div>
+
+      <!-- Hamburger (mobile only) -->
+      <label for="menu-toggle" class="lg:hidden text-gray-500 hover:text-orange-500 cursor-pointer">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
     </div>
+  </div>
+</nav>
+
+<!-- Sidebar (mobile) -->
+<div id="sidebar-menu"
+     class="fixed top-24 left-0 w-64 h-screen bg-white shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
+  <div class="p-6">
+    <ul class="flex flex-col space-y-4">
+      <a href="index.html" class="text-gray-900 hover:text-orange-500 font-medium">Home</a>
+      <a href="properties.html" class="text-gray-900 hover:text-orange-500 font-medium">Properties</a>
+      <a href="propertydetails.html" class="text-gray-900 hover:text-orange-500 font-medium">Property Details</a>
+      <a href="contact.html" class="text-gray-900 hover:text-orange-500 font-medium">Contact</a>
+
+      <!-- Login & Signup inside sidebar -->
+      <a href="login.html" class="block px-4 py-2 rounded-full text-center border border-gray-300 hover:bg-gray-100">Login</a>
+      <a href="signup.html" class="block px-4 py-2 rounded-full text-center bg-orange-500 text-white hover:bg-orange-600">Sign Up</a>
+
+      <a href="scheduleavisit.html"
+         class="block px-4 py-2 rounded-full text-center bg-gray-900 text-white hover:bg-orange-500">Schedule a Visit</a>
+    </ul>
+  </div>
+</div>
+
+<!-- Overlay (click to close) -->
+<label for="menu-toggle" id="sidebar-overlay" class="fixed inset-0 bg-black opacity-0 pointer-events-none z-40 cursor-pointer"></label>
+
+
     <section id="contact" class="py-16 text-white"
         style="background-image: url(images/image9.jpg); background-size: cover; background-repeat: no-repeat;">
         <div class="container mx-auto px-4">
@@ -115,13 +101,6 @@
                     <button type="submit" id="form-submit"
                         class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors duration-300 w-full">Send
                         Message</button>
-
-                    <div class="special-1 flex flex-row items-center space-x-4 w-full">
-                        <a href="login.html"
-                            class="a-1 px-4 py-2 text-gray-700 font-medium rounded-full hover:bg-gray-100 transition-colors">Login</a>
-                        <a href="signup.html"
-                            class="px-6 py-2 bg-orange-500 text-white font-medium rounded-full shadow-md hover:bg-orange-600 transition-colors">Sign
-                            Up</a>
                     </div>
             </div>
             </form>

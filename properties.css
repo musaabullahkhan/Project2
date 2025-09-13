@@ -32,30 +32,32 @@ body {
     transform: scale(1.1);
 }
 
-#menu-toggle:checked {
-    display: none;
-}
-
 #sidebar-menu {
-    overflow: scroll;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-}
-
-#menu-toggle:checked~#sidebar-menu {
+  }
+  
+  #menu-toggle:checked ~ #sidebar-menu {
     transform: translateX(0);
-}
-
-#sidebar-overlay {
+  }
+  
+  #sidebar-overlay {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
-}
-
-#menu-toggle:checked~#sidebar-overlay {
+  }
+  
+  #menu-toggle:checked ~ #sidebar-overlay {
     opacity: 0.5;
     pointer-events: auto;
-}
+  }
+  /* Sidebar scrolling */
+#sidebar-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow: scroll;
+    max-height: 100vh;
+  }
 
 .accordion-content {
     max-height: 0;
