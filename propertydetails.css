@@ -1,12 +1,8 @@
-/* propertydetails.css */
-
-/* General font */
 body {
     font-family: 'Poppins', sans-serif;
     color: #1e1e1e;
   }
   
-  /* Hero background */
   .main1 {
     background-image: url(images/image20.jpg);
     background-repeat: no-repeat;
@@ -40,7 +36,6 @@ body {
     color: #fff;
   }
   
-  /* Apartment box */
   .main5 span {
     background-color: #FBD9CF;
     color: #1e1e1e;
@@ -61,7 +56,6 @@ body {
     max-width: 100%;
   }
   
-  /* Footer */
   footer {
     background-color: #333;
     width: 100%;
@@ -81,10 +75,9 @@ body {
   }
   
   footer a:hover {
-    color: #f97316; /* Tailwind orange-500 */
+    color: #f97316;
   }
   
-  /* Responsive hero */
   @media (max-width: 1024px) {
     .main1 {
       padding: 100px 20px;
@@ -110,7 +103,7 @@ body {
     opacity: 0.5;
     pointer-events: auto;
   }
-  /* Sidebar scrolling */
+
 #sidebar-menu {
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
